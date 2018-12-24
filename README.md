@@ -1,3 +1,5 @@
+## Salesforce platform event monitoring script (node.js)
+
 ### Intro
 
 This is just a simple script to monitor the platform events published by Salesforce on the commmand line using node.js. When a message is received, we simple print the message on the screen. That's it. Nothing clever!
