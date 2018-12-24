@@ -11,6 +11,7 @@
   "dependencies": {
     "faye": "^1.2.4",
     "request": "^2.87.0",
-    "unescape-js": "^1.1.1"
+    "unescape-js": "^1.1.1",
+    "yargs": "^12.0.5"
   }
 }
