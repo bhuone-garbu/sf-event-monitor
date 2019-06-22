@@ -2,7 +2,7 @@
 
 const faye = require( 'faye' ),
     request = require( 'request' ),
-	unescapeJs = require( 'unescape-js' ),
+    unescapeJs = require( 'unescape-js' ),
 	args = require( 'yargs' ).argv,
 	config = require('./config');
 
@@ -16,23 +16,15 @@ function getOAuthAndListenForEvents(error, response, body) {
         let instance_url = info.instance_url;
 		let sf_event_name = args.event;
 
-        //console.log('token: ' + access_token);
         console.log( 'instance_url: ' + instance_url );
         console.log( 'sf_event_name: ' + sf_event_name );
-        //console.log('token type: ' + info.token_type);
 
         let client = new faye.Client( instance_url + '/cometd/40.0/' );
 
         // adding the OAuth token header
         client.setHeader( 'Authorization', 'OAuth ' + access_token );
 		client.subscribe( '/event/' + sf_event_name, function(message) {
-        //client.subscribe('/event/File_Uploaded_Event__e', function(message) {
             console.log( 'Got a message: \n' + JSON.stringify( message ) );
-            //console.log('schema: \n' + JSON.stringify(message.schema));
-
-			// this is a string
-			//let changed_data = JSON.parse(unescapeJs(message.payload.Changed_Data_JSON__c));
-            //console.log('payload: \n' + JSON.stringify( changed_data, null, 3 ) );
         });
 
 		// this will just confirm that the the subscribtion is active
