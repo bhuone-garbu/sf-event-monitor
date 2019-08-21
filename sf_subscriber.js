@@ -28,11 +28,6 @@ function getOAuthAndListenForEvents(error, response, body) {
 		client.subscribe( '/event/' + sf_event_name, function(message) {
         //client.subscribe('/event/File_Uploaded_Event__e', function(message) {
             console.log( 'Got a message: \n' + JSON.stringify( message ) );
-            //console.log('schema: \n' + JSON.stringify(message.schema));
-
-			// this is a string
-			//let changed_data = JSON.parse(unescapeJs(message.payload.Changed_Data_JSON__c));
-            //console.log('payload: \n' + JSON.stringify( changed_data, null, 3 ) );
         });
 
 		// this will just confirm that the the subscribtion is active
