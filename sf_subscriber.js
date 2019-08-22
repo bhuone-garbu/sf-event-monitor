@@ -22,7 +22,7 @@ function getOAuthAndListenForEvents(error, response, body) {
 		// adding the OAuth token header
 		client.setHeader( 'Authorization', 'OAuth ' + access_token );
 		client.subscribe( '/event/' + sf_event_name, function(message) {
-        console.log( 'Got a message: \n' + JSON.stringify( message ) );
+        	console.log( 'Got a message: \n' + JSON.stringify( message ) );
         });
 
 		// this will just confirm that the the subscribtion is active
@@ -34,7 +34,8 @@ function getOAuthAndListenForEvents(error, response, body) {
 		client.errback( function( error ) {
 			console.error( "ERROR ON subscription Attempt: " + error.message );
 		});
-	} else {
+	}
+	else {
 		console.log( 'Failed to get an OAuth token... :(' );
 		console.log( 'Response:\n' + response );
     }
