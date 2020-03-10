@@ -9,7 +9,6 @@
   "author": "bhuone",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "faye": "^1.2.4",
     "request": "^2.87.0",

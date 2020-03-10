@@ -1,6 +1,5 @@
 'use strict';
 
-const axios = require('axios');
 const faye = require('faye');
 const request = require('request');
 const args = require('yargs').argv;
