@@ -12,26 +12,25 @@ const subscribeAndLogEventMessages = (error, response, body) => {
     const { access_token, instance_url } = JSON.parse(body);
     const sf_event_name = args.event;
 
-    console.log('instance_url: ' + instance_url);
-    console.log('sf_event_name: ' + sf_event_name);
+    console.log(`Salesforce instance url: ${instance_url}`);
 
-    const client = new faye.Client(instance_url + '/cometd/40.0/');
+    const client = new faye.Client(`${instance_url}'/cometd/40.0/'`);
 
     // adding the OAuth token header
     client.setHeader('Authorization', `OAuth ${access_token}`);
-    client.subscribe('/event/' + sf_event_name, (message) => {
-      console.log('Message: \n' + JSON.stringify(message));
+    client.subscribe(`/event/${sf_event_name}`, (message) => {
+      console.log(`Message: \n ${JSON.stringify(message)}`);
     });
 
     // this will just confirm that the the subscribtion is active
-    client.callback(() => console.log('Subscribed...'));
+    client.callback(() => console.log(`Subscribed to: ${sf_event_name}`));
 
     // log that upstream subscription encounters error
-    client.errback((error) => console.error("ERROR ON subscription Attempt: " + error.message));
+    client.errback((error) => console.error(`ERROR ON subscription attempt: ${error.message}`));
   }
 
   else {
-    console.error('Failed to get an OAuth token... Error:\n');
+    console.error('Failed to get an oauth token... Error:\n');
     console.error(JSON.stringify(response));
   }
 };

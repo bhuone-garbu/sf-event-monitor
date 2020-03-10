@@ -42,16 +42,16 @@ node sf_subscriber.js --event='Hello__e'
 This can always be hardcorded on the `.env` file if needed.
 
 All this is doing is switching prefix of the global oauth2 endpoint on Salesforce
-* `https://test.salesforce.com/services/oauth2/token` for sandbox and uat
+* `https://test.salesforce.com/services/oauth2/token` for sandbox/uat environment
 * `https://login.salesforce.com/services/oauth2/token` for production salesforce
 
 
 Assuming everything works fine, then you should see that you have subscribed and start receiving message
 ```
 $ node sf_subscriber.js --event='Hello__e'
-instance_url: https://some_instance.salesforce.com
-sf_event_name: Hello__e
-Subscribed...
+
+Salesforce instance url: https://some_instance.salesforce.com
+Subscribed to: Hello__e
 Message:
 
 {"schema":"-2QuiBn9MjLlv6RCsJrA5Q", "body" : "hello" }
