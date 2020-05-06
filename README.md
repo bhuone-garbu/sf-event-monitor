@@ -1,12 +1,12 @@
 # Salesforce platform event monitoring script (node.js)
 
-### UPDATE!
+## UPDATE!
 
-I built this in the early 2018 when Salesforce started pushing for streaming and platform events as the de-facto standard for integrating with external 3rd party clients instead of custom point-to-point solution. 'High volume' was not even a thing nor the 'Publish After Commit' feature and everything was pretty much experimental, which meant monitoring and debugging events was a nightmare and had to rely on system built by someones.
+I built this in the early 2018 when Salesforce started pushing for streaming and platform events for integrating with external 3rd party clients instead of custom point-to-point solution. 'High volume' was not even a thing nor the 'Publish After Commit' feature and everything was pretty much experimental, which meant monitoring and debugging events was a nightmare and had to rely on system built by someones.
 
-People started building and installing app exchange packages to monitor events. For me, the whole idea of installing packages just to see some events was kinda of dumb and cumbersome, so I wrote this myself. It's generic and anyone can run and monitoring the events straight from their command line using node.
+People started building and installing app exchange packages to monitor events and UIs. However, for me, the whole idea of installing app exchange packages just to see some events was kind of dumb, *a bit over the top* and cumbersome. Being a developer, I could not help but write a simple subscriber myself that allows me to test events and tweak it exactly how I want when necessary.
 
-How much useful this is now - I will leave this up to the readers/developers. Thanks for stopping by.
+It's generic and anyone can run and monitoring the events straight from their command line using node. How much useful this is now - I will leave this up to the readers/developers. Thanks for stopping by.
 
 ## Intro
 
