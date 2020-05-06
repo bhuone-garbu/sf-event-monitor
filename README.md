@@ -2,11 +2,11 @@
 
 ## UPDATE!
 
-I built this in the early 2018 when Salesforce started pushing for streaming and platform events for integrating with external 3rd party clients instead of custom point-to-point solution. 'High volume' was not even a thing nor the 'Publish After Commit' feature and everything was pretty much experimental, which meant monitoring and debugging events was a nightmare and had to rely on system built by someones.
+I built this in the early 2018 when Salesforce started pushing for streaming and platform events for integrating with external 3rd party clients instead of custom point-to-point solution. 'High volume' was not even a thing nor the 'Publish After Commit' feature and everything was pretty much experimental, which meant monitoring and debugging events was a nightmare and had to rely on system built by someone else.
 
-People started building and installing app exchange packages to monitor events and UIs. However, for me, the whole idea of installing app exchange packages just to see some events was kind of dumb, *a bit over the top* and cumbersome. Being a developer, I could not help but write a simple subscriber myself that allows me to test events and tweak it exactly how I want when necessary.
+Soon people started building and installing app exchange packages with "pretty" UIs to monitor events. However, the whole idea of installing app exchange packages just to see some events was kind of dumb, *a bit over the top* and cumbersome to me. Being a developer, I could not help but write a simple subscriber myself that allows me to test platform events and tweak it exactly how I want when necessary to integrate in other system.
 
-It's generic and anyone can run and monitoring the events straight from their command line using node. How much useful this is now - I will leave this up to the readers/developers. Thanks for stopping by.
+It's generic and anyone can run and monitoring the events straight from their command line using node. How much useful this is now - I will leave this up to the readers/developers. I am sure there are more better tools out there now. Thanks for stopping by.
 
 ## Intro
 
